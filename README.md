@@ -14,6 +14,9 @@
 - Python ast könyvtár 
 ## Changelog
 
+**v1.2.0** *2022.06.25.*
+- Külön mappák, ahova mentésre kerülnek a kész és későbbi rangsorok
+
 **v1.1.1** *2022.06.25.*
 - Sorba rendezési hiba fixálása
 

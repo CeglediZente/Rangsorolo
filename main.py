@@ -1,7 +1,7 @@
 import ast
 
 def koszonto():
-    print("Rangsoroló v1.1\nKészítő: Ceglédi Zente Holló\n\nEnnek a programnak a segítségével rangsorolásokat készíthetsz, amelyeket utána kiexportálhatsz táblázatként.")
+    print("Rangsoroló v1.2.0\nKészítő: Ceglédi Zente Holló\n\nEnnek a programnak a segítségével rangsorolásokat készíthetsz, amelyeket utána kiexportálhatsz táblázatként.")
     command = int(input("\n\n1 - Rangsorolás készítése\n2 - Kilépés\n3 - Félbehagyott rangsorolás visszatöltése\nAdd meg a parancs sorszámát: "))
     if command == 2:
         exit()
@@ -61,8 +61,8 @@ def rangsorolo(command):
         sorszam = 0
     elif command == 3:
         print("Fájl visszatöltése!")
-        fileName = input("Add meg a fájl nevét, amilyen néven mentetted a fájlt (kiterjesztés nélkül): ")
-        fileBetoltes = open(f"./{fileName}.txt", "r", encoding="UTF-8")
+        fileName = input("Add meg a mentett fájl nevét (kiterjesztés nélkül): ")
+        fileBetoltes = open(f"./saves/mentett/{fileName}.txt", "r", encoding="UTF-8")
         index = 0
         for sor in fileBetoltes:
             index += 1
@@ -85,6 +85,7 @@ def rangsorolo(command):
                 sorszam = int(sorJo)
             elif index == 9:
                 nevmezoSzam = int(sorJo)
+            print("A fájl sikeresen vissza lett töltve!")
     tovabb = True
     while tovabb == True:
         elem = []
@@ -120,7 +121,7 @@ def rangsorolo(command):
     # print(elemekListaja)
     helyezesIndex = 0
     fileName = input("\nAdd meg milyen néven mentse el a rendszer a fájlt (kiterjesztést ne írj!): ")
-    vege = open(f"./{fileName}.html", "w", encoding="UTF-8")
+    vege = open(f"./saves/kesz/{fileName}.html", "w", encoding="UTF-8")
     for sor in elemekListaja:
         helyezesIndex += 1
         kod.append("<tr>")
@@ -142,13 +143,13 @@ def rangsorolo(command):
     # print(kod)
     kod.append("</table>")
     vege.write("\n".join(kod))
-    print("Sikeres kiíratás!\nA fájl mappájában megtalálod a rangsort!")
+    print("Sikeres kiíratás!\nA saves mappában megtalálod a rangsort!")
 
 def kesobb(elemekListaja, idLegyen, kategoriaLegyen, megjegyzesLegyen, ertekelesTipus, kod, felhasznaloAttributumLista, sorszam, nevmezoSzam):
     fileNev = input("Add meg a fájl nevét, ahova menteni szeretnéd a programot (kiterjesztés nélkül): ")
-    mentesHely = open(f"./{fileNev}.txt", "w", encoding="UTF-8")
+    mentesHely = open(f"./saves/mentett/{fileNev}.txt", "w", encoding="UTF-8")
     mentesHely.write(f"{elemekListaja}\n{idLegyen}\n{kategoriaLegyen}\n{megjegyzesLegyen}\n{ertekelesTipus}\n{kod}\n{felhasznaloAttributumLista}\n{sorszam-1}\n{nevmezoSzam}")
-    print("A fájl sikeresen mentésre került!")
+    print("A fájl sikeresen mentésre került a saves mappába!")
 
 command = koszonto()
 if command == 1 or command == 3:
