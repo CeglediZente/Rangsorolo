@@ -14,6 +14,11 @@
 - Python ast könyvtár 
 ## Changelog
 
+**v1.2.1** *2022.06.25.*
+- Hiba fixálása
+- Mappák feltöltése
+- Példa feltöltése *(example.txt, example.html)*
+
 **v1.2.0** *2022.06.25.*
 - Külön mappák, ahova mentésre kerülnek a kész és későbbi rangsorok
 

@@ -85,7 +85,7 @@ def rangsorolo(command):
                 sorszam = int(sorJo)
             elif index == 9:
                 nevmezoSzam = int(sorJo)
-            print("A fájl sikeresen vissza lett töltve!")
+        print("A fájl sikeresen vissza lett töltve!")
     tovabb = True
     while tovabb == True:
         elem = []

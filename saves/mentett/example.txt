@@ -1,0 +1,9 @@
+[[7, 1, 'Fánk', 'Édesség', 'Csokis vagy epres'], [8, 2, 'Palacsinta', 'Édesség', '---'], [9, 3, 'Paradicsomleves', 'Leves', '---'], [8, 4, 'Pörkölt', 'Főétel', '---'], [4, 5, 'Brokkoli', 'Zöldség', '---']]
+i
+i
+i
+1
+['<style>', '.rangsor-tablazat, .rangsor-tablazat tr, .rangsor-tablazat tr td, .rangsor-tablazat tr th {', 'border-collapse: collapse;', 'border: 2px solid rgb(0, 0, 0);', 'padding: 6px;', "font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;", 'font-size: large;', 'text-align: center;', '}', '</style>', '<table class="rangsor-tablazat">', '<tr>', '<th>Helyezés</th>', '<th>ID</th>', '<th>Értékelés</th>', '<th>Étel</th>', '<th>Kategória</th>', '<th>Megjegyzés</th>', '</tr>']
+['Étel', 'Kategória', 'Megjegyzés']
+5
+1
