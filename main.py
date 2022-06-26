@@ -26,7 +26,7 @@ def rangsorolo(command):
                     continue
                 ertekek.append(ertek)
         if ertekelesTipus == "2":
-            ertekek = ["SS", "S+", "S", "S-", "A+", "A", "A-", "B+", "B", "B-", "C+", "C", "C-", "D+", "D", "D-", "E+", "E", "E-", "F+", "F", "F-"]
+            ertekek = ["SS++", "SS+", "SS", "SS-", "S+", "S", "S-", "A+", "A", "A-", "B+", "B", "B-", "C+", "C", "C-", "D+", "D", "D-", "E+", "E", "E-", "F+", "F", "F-", "N"]
         nevmezoSzam = int(input("Hány névmezőt szeretnél létrehozni (pl.: 2, szerző neve, könyv címe)? "))
         nevmezoLista = []
         felhasznaloAttributumLista = []
@@ -107,11 +107,9 @@ def rangsorolo(command):
             kesobb(elemekListaja, idLegyen, kategoriaLegyen, megjegyzesLegyen, ertekelesTipus, kod, felhasznaloAttributumLista, sorszam, nevmezoSzam)
             exit()
         # print(elem, elemekListaja)
-        ertekeles = int(input("Értékelés: "))
-        if ertekelesTipus == "1":
-            elem.insert(0, int(ertekeles))
-        else:
-            elem.insert(0, ertekeles)
+        ertekeles = input("Értékelés: ")
+        ertekeles = float(ertekeles)
+        elem.insert(0, ertekeles)
         # print(elem, elemekListaja)
         print("\nElem sikeresen létrehozva!\n\n")
         elemekListaja.append(elem)

@@ -14,6 +14,10 @@
 - Python ast könyvtár 
 ## Changelog
 
+**v1.2.2** *2022.06.26.*
+- Számok által értékelt rangsoroknál tört megadásának lehetősége
+- Betűs rangsor bővítése (*még nem használható*)
+
 **v1.2.1** *2022.06.25.*
 - Hiba fixálása
 - Mappák feltöltése
