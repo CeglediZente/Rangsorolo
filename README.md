@@ -14,6 +14,9 @@
 - Python ast könyvtár 
 ## Changelog
 
+**v1.2.3** *2022.06.26.*
+- Helytelen értékelés megadása által generált hiba fixálása
+
 **v1.2.2** *2022.06.26.*
 - Számok által értékelt rangsoroknál tört megadásának lehetősége
 - Betűs rangsor bővítése (*még nem használható*)

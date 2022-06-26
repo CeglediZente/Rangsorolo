@@ -108,7 +108,24 @@ def rangsorolo(command):
             exit()
         # print(elem, elemekListaja)
         ertekeles = input("Értékelés: ")
-        ertekeles = float(ertekeles)
+        tovabbErt = False
+        nincsHiba = True
+        pontSzamlalo = 0
+        if ertekelesTipus == "1":
+            while tovabbErt == False:
+                for szam in ertekeles:
+                    if szam.isnumeric() == False and szam != ".":
+                        nincsHiba = False
+                    elif szam == ".":
+                        pontSzamlalo += 1
+
+                if nincsHiba == True and pontSzamlalo <= 1:
+                    ertekeles = float(ertekeles)
+                    tovabbErt = True
+                else:
+                    print("Hibásan megadott értékelés!\nÉrtékelés formája pl.: 3.14")
+                    ertekeles = input("Értékelés: ")
+                    pontSzamlalo = 0
         elem.insert(0, ertekeles)
         # print(elem, elemekListaja)
         print("\nElem sikeresen létrehozva!\n\n")
