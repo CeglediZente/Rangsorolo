@@ -12,7 +12,11 @@
 
 - Python 3.10
 - Python ast könyvtár 
+- Python os könyvtár
 ## Changelog
+
+**v1.3.0** *2022.06.27.*
+- Félbehagyott ranglisták kilistázása
 
 **v1.2.3** *2022.06.26.*
 - Helytelen értékelés megadása által generált hiba fixálása

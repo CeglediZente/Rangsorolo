@@ -1,10 +1,21 @@
 import ast
+import os
 
 def koszonto():
     print("Rangsoroló v1.2.0\nKészítő: Ceglédi Zente Holló\n\nEnnek a programnak a segítségével rangsorolásokat készíthetsz, amelyeket utána kiexportálhatsz táblázatként.")
-    command = int(input("\n\n1 - Rangsorolás készítése\n2 - Kilépés\n3 - Félbehagyott rangsorolás visszatöltése\nAdd meg a parancs sorszámát: "))
+    command = int(input("\n\n1 - Rangsorolás készítése\n2 - Kilépés\n3 - Félbehagyott rangsorolás visszatöltése\n4 - Félbehagyott rangsorok listázása\nAdd meg a parancs sorszámát: "))
     if command == 2:
         exit()
+    if command == 4:
+        print(f"A mentett fájlok az alábbiak:")
+        fileSzam = 0
+        fileLista = os.listdir("./saves/mentett")
+        for file in fileLista:
+            if file != "example.txt":
+                print("-",file[:-4])
+                fileSzam += 1
+        print("A mentett fájlok száma:", fileSzam)
+        command = int(input("\n\n1 - Rangsorolás készítése\n2 - Kilépés\n3 - Félbehagyott rangsorolás visszatöltése\nAdd meg a parancs sorszámát: "))
     return command
 
 def rangsorolo(command):
@@ -26,7 +37,7 @@ def rangsorolo(command):
                     continue
                 ertekek.append(ertek)
         if ertekelesTipus == "2":
-            ertekek = ["SS++", "SS+", "SS", "SS-", "S+", "S", "S-", "A+", "A", "A-", "B+", "B", "B-", "C+", "C", "C-", "D+", "D", "D-", "E+", "E", "E-", "F+", "F", "F-", "N"]
+            ertekek = ["SSS", "SS++", "SS+", "SS", "SS-", "S+", "S", "S-", "A+", "A", "A-", "B+", "B", "B-", "C+", "C", "C-", "D+", "D", "D-", "E+", "E", "E-", "F+", "F", "F-", "N"]
         nevmezoSzam = int(input("Hány névmezőt szeretnél létrehozni (pl.: 2, szerző neve, könyv címe)? "))
         nevmezoLista = []
         felhasznaloAttributumLista = []
