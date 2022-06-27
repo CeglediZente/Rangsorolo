@@ -13,6 +13,13 @@
 - Python 3.10
 - Python ast könyvtár 
 - Python os könyvtár
+
+## Tervezett fejlesztések
+
+1. [ ] Cím megadása a rangsornak
+2. [ ] Mezők módosításának a lehetősége a hozzáadás előtt
+3. [ ] Grafikus felület
+
 ## Changelog
 
 **v1.3.0** *2022.06.27.*
